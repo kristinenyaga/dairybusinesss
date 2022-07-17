@@ -2,20 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 
 }
 body{
     min-height: 100vh;
     background: #fff;
+    color: #1a120d;
+    background-color: aliceblue;
     
 
 }
 .logo{
-    
-
+    color: #1a120d;
     letter-spacing: 2.5px;
-    background: #E4DCCF;
+    text-align: center;
     position: relative;
+    top: 10em;
     
     
 }
@@ -33,28 +36,26 @@ body{
     font-family: 'Bree Serif', serif;
     
 }
-.navigationBar{
+/* .navigationBar{
     position: fixed;
     top:0;
     left: 20px;
     bottom: 20px;
-    width: 350px;
-    border-radius: 10px;
-    background:#E4DCCF; 
+   
+    border-radius: 5px;
+    
     box-sizing: initial;
-     border-left: 5px solid #E4DCCF; 
+     
     transition: width 0.2s;
     overflow: hidden;
     height: 100vh;
     box-shadow: 0 6px 7px -4 rgba(0,0,0,0.2);
 }
+ */
 
-.navigationBar.active{
-    width:300px;
-}
 .navigationBar ul{
     position: absolute;
-    top: 100px;
+    top: 6px;
     left: 0;
     width: 100%;
     padding-left: 5px;
@@ -71,6 +72,7 @@ body{
     width: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    
 
 }
 .navigationBar ul li.active{
@@ -86,6 +88,7 @@ body{
     color: #1a120d;
     font-weight: 400;
     font-size: 22px;
+    display: inline-block;
     
     
 }
@@ -122,18 +125,20 @@ body{
      left: 40px;
     width: 50px;
     height: 50px;
-    
+
     background: #7D9D9C;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
     
 
 }
 .toggleMenu.active{
     background: #7D9D9C;
+    display: none;
     
 }
 .toggleMenu ion-icon{
@@ -145,9 +150,115 @@ body{
 .toggleMenu ion-icon.display,
 .toggleMenu.active ion-icon.close{
     display: block;
+    display: none;
 
 }
 .toggleMenu ion-icon.close,
 .toggleMenu.active ion-icon.display{
     display: none;
 }
+.charts{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    display: none;
+    
+   
+}
+.chart container{
+    justify-content: space-between;
+}
+.second{
+    display: flex;
+    gap: 120px;
+    position: relative;
+    top: -3em;
+    
+
+    
+}
+.first{
+    display: flex;
+    gap: 70px;
+    position: relative;
+    top: -8em;
+    
+   
+    
+ }
+ 
+ .day,
+ .week,
+ .month{
+    border: 2px solid black;
+    padding: 4em;
+    box-shadow: 0 0 10px 0;
+    background-color: #fff;
+    border: hidden;
+    font-size: 20px;
+    color: #1a120d;
+    font-weight: bold;
+ }
+ 
+ .year,
+ .shed,
+ .cows{
+    border: 2px solid black;
+    padding: 4.1em;
+    box-shadow: 0 0 10px 0;
+    background-color: #fff;
+    border: hidden;
+    font-size: 20px;
+    color: #1a120d;
+    font-weight: bold;
+
+ }
+  .shed,
+ .cows{
+   width: inherit;
+   padding-left: 4.5em;
+   padding-right: 5.5em;
+   margin-left: -2em;
+   margin-right: -1em;
+   color: #1a120d;
+ } 
+ .dailyproduction form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .weeklyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .monthlyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .yearlyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ #submit {
+    text-decoration:none;
+    width:10%;
+    text-align:center;
+    display:block;
+    background-color:rgb(167, 176, 232);
+    color:#fff;
+    border:1px solid rgb(167, 176, 232);
+    padding:7px 0;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:5px;
+    position: relative;
+    top: 10px;
+    }
+ 
+ 
