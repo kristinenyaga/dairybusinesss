@@ -260,5 +260,21 @@ body{
     position: relative;
     top: 10px;
     }
- 
+    btn1, input[type=submit],input[type=button]{
+        font-size: 1.4em;
+        font-weight: bold;
+        margin: 8px;
+        padding: 12px;
+        background-color: #EEE;
+        color: #222;
+        border: 4px solid orange;
+    }
+    btn1:hover,input[type=submit]:hover, input[type=button]:hover{
+        background-color: #456;
+        color: orange;
+        cursor: pointer;
+    }
+    input[type=text]{
+        font-size: 1.4em;
+    }
  
