@@ -44,6 +44,9 @@ body{
     transition: width 0.2s;
     overflow: hidden;
 }
+.navigation.active{
+    width:300px;
+}
 .navigation ul{
     position: absolute;
     top: 50px;
@@ -65,6 +68,10 @@ body{
     border-bottom-left-radius: 20px;
 
 }
+.navigation ul li.active{
+    background: #fff;
+    color:#333;
+} 
 .navigation ul li a{
     position: relative;
     display: block;
@@ -76,6 +83,9 @@ body{
     font-size: 22px;
     
     
+}
+.navigation ul li.active a{ 
+    color:#333;
 }
 .navigation ul li a .title {
     display: block;
