@@ -35,6 +35,8 @@ const out1=document.getElementById('output1')
 const out2=document.getElementById('output2')
 const out3=document.getElementById('output3')
 const out4=document.getElementById('output4')
+const out5=document.getElementById('output5')
+
  function getOutput1(){
     let answer='Your production'
     let get=answer+one;
@@ -56,5 +58,11 @@ const out4=document.getElementById('output4')
     out4.innerHTML=four.value;
  }
  bttn.addEventListener('click',getOutput4)
+ function getAdd(){
+    let getAddResult=one+two+three+four;
+    return getAddResult;
+ }
+ let total=getAdd();
+output5.innerHTML=total.value
 
 
