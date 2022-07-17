@@ -14,25 +14,36 @@
 
 </head>
 <body>
-    <div class="header"></div>
+    <!-- <div class="header"></div> -->
     <div class="userinput">
-        
-        <label for="shed1" >Shed A</label><input id="shedA" type="text" placeholder="enter milk in litres">
-        <button id="btn1" onclick="getOutput1()">click</button> 
-        <label for="shed2" >Shed B</label><input id="shedB" type="text" placeholder="enter milk in litres">
-        <button id="btn1" onclick="getOutput2()">click</button>
-        <label for="shed3" >Shed C</label><input id="shedC" type="text" placeholder="enter milk in litres">
-        <button id="btn1" onclick="getOutput3()">click</button>
-        <label for="shed4" >Shed D</label><input id="shedD"type="text" placeholder="enter milk in litres">
-        <button id="btn1" onclick="getOutput4()">click</button>
-
-
+        <div class="div1">
+            
+                <label for="shed1" >Shed A</label><input id="shedA" type="text" placeholder="enter milk in litres">
+                <button id="btn1" onclick="getOutput1()">click</button>
+             
+        </div>
+        <div class="div2">
+            
+                <label for="shed2" >Shed B</label><input id="shedB" type="text" placeholder="enter milk in litres">
+                <button id="btn1" onclick="getOutput2()">click</button>
+                
+        </div>
+        <div class="div3">
+            <label for="shed3" >Shed C</label><input id="shedC" type="text" placeholder="enter milk in litres">
+            <button id="btn1" onclick="getOutput3()">click</button>
+        </div>
+        <div class="div4">
+            <label for="shed4" >Shed D</label><input id="shedD"type="text" placeholder="enter milk in litres">
+            <button id="btn1" onclick="getOutput4()">click</button>
+        </div>
     </div>
-    <div>
+    <div class="ptag">
         <p >Your production in shed A is <span id="output1">Nan</span> litres per day</p>
-        <p >Your production in shed A is <span id="output2">Nan</span> litres per day</p>
-        <p >Your production in shed A is <span id="output4">Nan</span> litres per day</p>
-        <p >Your production in shed A is <span id="output5">Nan</span> litres per day</p>
+        <p >Your production in shed B is <span id="output2">Nan</span> litres per day</p>
+        <p >Your production in shed C is <span id="output3">Nan</span> litres per day</p>
+        <p >Your production in shed D is <span id="output4">Nan</span> litres per day</p>
+        <p >Your total production is <span id="output5">Nan</span> litres per day</p>
+
 
     </div>
     
