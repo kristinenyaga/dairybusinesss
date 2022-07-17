@@ -65,3 +65,29 @@ body{
     border-bottom-left-radius: 20px;
 
 }
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #1a120d;
+    font-weight: 400;
+    font-size: 22px;
+    
+    
+}
+.navigation ul li a .title {
+    display: block;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 60px;
+    line-height: 45px;
+    white-space: normal;
+}
+.navigation ul li a .title >img{
+    width: 30px;
+    position: relative;
+    top: 10px;
+    right: 2px;
+}
