@@ -25,5 +25,36 @@ console.log("milk production is")
 
 }
 
-let milkPerDay=document.getElementById('dailymilk')
-console.log(milkPerDay)
+const one=document.getElementById('shedA')
+const two=document.getElementById('shedB')
+const three=document.getElementById('shedC')
+const four=document.getElementById('shedD')
+const bttn=document.getElementById('btn1')
+
+const out1=document.getElementById('output1')
+const out2=document.getElementById('output2')
+const out3=document.getElementById('output3')
+const out4=document.getElementById('output4')
+ function getOutput1(){
+    let answer='Your production'
+    let get=answer+one;
+    out1.innerHTML=one.value;
+
+ }
+ bttn.addEventListener('click',getOutput1)
+ function getOutput2(){
+    out2.innerHTML=two.value;
+ }
+ bttn.addEventListener('click',getOutput2)
+
+ function getOutput3(){
+    out3.innerHTML=three.value;
+ }
+ bttn.addEventListener('click',getOutput3)
+
+ function getOutput4(){
+    out4.innerHTML=four.value;
+ }
+ bttn.addEventListener('click',getOutput4)
+
+
