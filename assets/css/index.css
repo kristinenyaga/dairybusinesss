@@ -4,7 +4,7 @@
     box-sizing: border-box;
     
 
-}
+}/*
 body{
     min-height: 100vh;
     background: #fff;
@@ -12,7 +12,7 @@ body{
     background-color: aliceblue;
     
 
-}
+}/
 .logo{
     color: #1a120d;
     letter-spacing: 2.5px;
@@ -51,7 +51,7 @@ body{
     height: 100vh;
     box-shadow: 0 6px 7px -4 rgba(0,0,0,0.2);
 }
- */
+ 
 
 .navigationBar ul{
     position: absolute;
@@ -277,4 +277,41 @@ body{
     input[type=text]{
         font-size: 1.4em;
     }
- 
+  */
+  .userinput{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    top: 30px;
+
+ }
+ .div1,
+ .div2,
+ .div3,
+ .div4{
+    font-size: larger;
+ }
+ #btn1{
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color: rgb(82, 71, 71);
+    border-radius: 5px;
+    
+ }
+ .ptag{
+    position: relative;
+    top: 56px;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Raleway',sans-serif;
+ }
+ input[type=text] {
+    width:20%;
+    padding:10px;
+    margin-top:30px;
+    border:1px solid #ccc;
+    padding-left:40px;
+    font-size:16px;
+    
+    }
