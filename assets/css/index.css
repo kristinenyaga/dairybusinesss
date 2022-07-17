@@ -12,44 +12,49 @@ body{
 }
 .logo{
     
-    margin-left: 40px;
+
     letter-spacing: 2.5px;
+    background: #E4DCCF;
+    position: relative;
+    
     
 }
 .logo h1{
     font-weight:bold;
-    font-size: 50px;
-    
-
+    font-size: 40px;
+    font-family: "monteserat",sans-serif;
 
 }
 .logo h2{
     
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Courgette', cursive;
     font-weight:bold;
     font-family: 'Bree Serif', serif;
     
 }
-.navigation{
+.navigationBar{
     position: fixed;
-    top: 140px;
+    top:0;
     left: 20px;
     bottom: 20px;
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
     background:#E4DCCF; 
     box-sizing: initial;
      border-left: 5px solid #E4DCCF; 
     transition: width 0.2s;
     overflow: hidden;
+    height: 100vh;
+    box-shadow: 0 6px 7px -4 rgba(0,0,0,0.2);
 }
-.navigation.active{
+
+.navigationBar.active{
     width:300px;
 }
-.navigation ul{
+.navigationBar ul{
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 0;
     width: 100%;
     padding-left: 5px;
@@ -60,7 +65,7 @@ body{
     
     
 }
- .navigation ul li{
+ .navigationBar ul li{
     position: relative;
     list-style: none;
     width: 100%;
@@ -68,11 +73,11 @@ body{
     border-bottom-left-radius: 20px;
 
 }
-.navigation ul li.active{
+.navigationBar ul li.active{
     background: #fff;
     color:#333;
 } 
-.navigation ul li a{
+.navigationBar ul li a{
     position: relative;
     display: block;
     width: 100%;
@@ -84,10 +89,19 @@ body{
     
     
 }
-.navigation ul li.active a{ 
+
+.navigationBar ul li a:hover{
+    
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: #ecce9f;
+}
+
+.navigationBar ul li.active a{ 
     color:#333;
 }
-.navigation ul li a .title {
+.navigationBar ul li a .title {
     display: block;
     padding-left: 10px;
     margin-left: 10px;
@@ -95,17 +109,17 @@ body{
     line-height: 45px;
     white-space: normal;
 }
-.navigation ul li a .title >img{
+.navigationBar ul li a .title >img{
     width: 30px;
     position: relative;
     top: 10px;
     right: 2px;
 }
-.toggle{
+.toggleMenu{
     position: fixed;
-    top: 150px;
-    /* right: 20px; */
-    left: 30px;
+    top: 85px;
+     right: 20px; 
+     left: 40px;
     width: 50px;
     height: 50px;
     
@@ -118,22 +132,22 @@ body{
     
 
 }
-.toggle.active{
+.toggleMenu.active{
     background: #7D9D9C;
     
 }
-.toggle ion-icon{
+.toggleMenu ion-icon{
     position: absolute;
     color: #fff;
     font-size: 34px;
     display: none;
 }
-.toggle ion-icon.open,
-.toggle.active ion-icon.close{
+.toggleMenu ion-icon.display,
+.toggleMenu.active ion-icon.close{
     display: block;
 
 }
-.toggle ion-icon.close,
-.toggle.active ion-icon.open{
+.toggleMenu ion-icon.close,
+.toggleMenu.active ion-icon.display{
     display: none;
 }
