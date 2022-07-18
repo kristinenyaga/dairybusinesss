@@ -25,20 +25,25 @@ function totalProduction() {
 
 }
 
-const one = document.getElementById('shedA')
-const two = document.getElementById('shedB')
+const one = parseInt(document.getElementById('shedA').value)
+document.getElementById("output1").innerHTML = one;
+
+const two = parseInt(document.getElementById('shedB').value )
 const three = document.getElementById('shedC')
 const four = document.getElementById('shedD')
 const bttn = document.getElementById('btn1')
-const out5 = document.getElementById('output5')
+const bttn2 = document.getElementById('button')
+
+const out5 = parseInt(document.getElementById('output5'))
 
 // const btn = document.getElementById('k')
 
-const out1 = document.getElementById('output1')
+const out1 = document.getElementById('output1').innerHTML = one;
 const out2 = document.getElementById('output2')
 const out3 = document.getElementById('output3')
 const out4 = document.getElementById('output4')
 const getAddResult = document.getElementById('output5')
+console.log(one)
 
 function getOutput1() {
 
@@ -77,16 +82,7 @@ bttn.addEventListener('click', getOutput4)
 // btn.addEventListener('click', getAdd)
 
 // out5.innerHTML=total.value
-function getTotal(){
-    var arr=document.querySelectorAll('.userinput')
-      let totalCount=0
-        for(var i=0;i<arr.length;i++){
-            if(parseInt(arr[i].value)){
-                totalCount+=parseInt(arr[i].value)
-            }
-        }
-        document.getElementById("totalvalue").value=totalCount
-    }
+
 
 const weeksellp = document.getElementById('spweek')
 const durationweek = document.getElementById('durationweek')
