@@ -18,34 +18,40 @@
     <div class="userinput">
         <div class="div1">
             
-                <label for="shed1" >Shed A: </label><input id="shedA" type="text" placeholder="enter milk in litres">
+                <label for="shed1" >Shed A: </label>
+                <input id="shedA" type="text" placeholder="enter milk in litres">
                 
         </div>
 
         <div class="div2">
             
-                <label for="shed2" >Shed B: </label><input id="shedB" type="text" placeholder="enter milk in litres">
+                <label for="shed2" >Shed B: </label>
+                <input id="shedB" type="text" placeholder="enter milk in litres">
                 <!-- <button id="btn1" onclick="getOutput2()">click</button> -->
                 
         </div>
         <div class="div3">
-            <label for="shed3" >Shed C: </label><input id="shedC" type="text" placeholder="enter milk in litres">
+            <label for="shed3" >Shed C: </label>
+            <input id="shedC" type="text" placeholder="enter milk in litres">
             <!-- <button id="btn1" onclick="getOutput3()">click</button> -->
         </div>
         <div class="div4">
-            <label for="shed4" >Shed D: </label><input id="shedD"type="text" placeholder="enter milk in litres">
+            <label for="shed4" >Shed D: </label>
+            <input id="shedD"type="text" placeholder="enter milk in litres">
             <!-- <button id="btn1" onclick="getOutput4()"></button> -->
         </div>
-        <button id="button" onclick="getOutput1()">click</button>
-        <button id="k" onclick="getTotal()">total production</button>
-        <div class="totalinput">
+        <button id="button">click</button>
+        
+        <!-- <div class="totalinput">
             <label for="totalvalue">Total</label>
             <input type="text"id="totalvalue" value="0" disabled="">
 
-        </div>
+        </div> -->
+       
                 
         
     </div>
+    <br><br>
     <div class="ptag">
         <p >Your production in shed A is <span id="output1">Nan</span> litres per day</p>
         <p >Your production in shed B is <span id="output2">Nan</span> litres per day</p>
@@ -55,9 +61,45 @@
 
 
     </div>
-    <div>
-        <h1> Weekly and Monthly Income</h1>
-        <label for="spweek" >Selling Price(week): </label><input id="spweek" type="text" placeholder="selling price">
+
+    <br>
+    <br>
+    <!-- <div>    
+        <div class="totalinput">
+        <label for="totalvalue">Total</label>
+        <input type="text"id="totalvalue" value="0" disabled="">
+
+    </div> -->
+    <h1> Weekly and Monthly Income</h1>
+    <div id="reports">
+        
+        <div id="weekcontainer">
+            <h2>Weekly Income</h2>
+            <p id="weeklyIncome"></p>
+        </div>
+        <div id="yearcontainer">
+            <h2>Yearly Income</h2>
+            <p id="yearlyIncome"></p>
+            <br>
+            <p id="jan"></p>
+            <p id="feb"></p>
+            <p id="mar"></p>
+            <p id="apr"></p>
+            <p id="may"></p>
+            <p id="jun"></p>
+            <p id="jul"></p>
+            <p id="aug"></p>
+            <p id="sep"></p>
+            <p id="oct"></p>
+            <p id="nov"></p>
+            <p id="dec"></p>
+        </div>
+    </div>
+
+
+
+
+        <!-- <label for="spweek" >Selling Price(week): </label><input id="spweek" type="text" placeholder="selling price">
         <button id="btn1" onclick="">click</button>
         <label for="durationweek" >Duration: </label><input id="durationweek" type="text" placeholder="time">
         <button id="btn1" onclick="">click</button>
@@ -66,7 +108,7 @@
     <label for="spmonth" >Selling Price(month): </label><input id="spmonth" type="text" placeholder="selling price">
     <button id="btn1" onclick="getOutput2()">click</button>
     <label for="durationmonth" >  Duration: </label><input id="durationmonth" type="text" placeholder="time">
-    <button id="btn1" onclick="getOutput2()">click</button>
+    <button id="btn1" onclick="getOutput2()">click</button> -->
     <!-- <div class="navigationBar">
         <div class="logo">
             <h1>Dairy Business</h1>
@@ -156,7 +198,717 @@
             </div>   
             
                      
-            
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+body{
+    min-height: 100vh;
+    background: #fff;
+    color: #1a120d;
+    font-size: larger;
+    font-family: 'Courgette', cursive;
+   
+    
+
+}/*
+.logo{
+    color: #1a120d;
+    letter-spacing: 2.5px;
+    text-align: center;
+    position: relative;
+    top: 10em;
+    
+    
+}
+.logo h1{
+    font-weight:bold;
+    font-size: 40px;
+    font-family: "monteserat",sans-serif;
+
+}
+.logo h2{
+    
+    font-size: 35px;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    font-family: 'Bree Serif', serif;
+    
+}
+/* .navigationBar{
+    position: fixed;
+    top:0;
+    left: 20px;
+    bottom: 20px;
+   
+    border-radius: 5px;
+    
+    box-sizing: initial;
+     
+    transition: width 0.2s;
+    overflow: hidden;
+    height: 100vh;
+    box-shadow: 0 6px 7px -4 rgba(0,0,0,0.2);
+}
+ 
+
+.navigationBar ul{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+    font-size: larger;
+    font-family: 'Rubik', sans-serif;
+    font-style: oblique;
+    
+    
+}
+ .navigationBar ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+
+}
+.navigationBar ul li.active{
+    background: #fff;
+    color:#333;
+} 
+.navigationBar ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #1a120d;
+    font-weight: 400;
+    font-size: 22px;
+    display: inline-block;
+    
+    
+}
+
+.navigationBar ul li a:hover{
+    
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: #ecce9f;
+}
+
+.navigationBar ul li.active a{ 
+    color:#333;
+}
+.navigationBar ul li a .title {
+    display: block;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 60px;
+    line-height: 45px;
+    white-space: normal;
+}
+.navigationBar ul li a .title >img{
+    width: 30px;
+    position: relative;
+    top: 10px;
+    right: 2px;
+}
+.toggleMenu{
+    position: fixed;
+    top: 85px;
+     right: 20px; 
+     left: 40px;
+    width: 50px;
+    height: 50px;
+
+    background: #7D9D9C;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+
+}
+.toggleMenu.active{
+    background: #7D9D9C;
+    display: none;
+    
+}
+.toggleMenu ion-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggleMenu ion-icon.display,
+.toggleMenu.active ion-icon.close{
+    display: block;
+    display: none;
+
+}
+.toggleMenu ion-icon.close,
+.toggleMenu.active ion-icon.display{
+    display: none;
+}
+.charts{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    display: none;
+    
+   
+}
+.chart container{
+    justify-content: space-between;
+}
+.second{
+    display: flex;
+    gap: 120px;
+    position: relative;
+    top: -3em;
+    
+
+    
+}
+.first{
+    display: flex;
+    gap: 70px;
+    position: relative;
+    top: -8em;
+    
+   
+    
+ }
+ 
+ .day,
+ .week,
+ .month{
+    border: 2px solid black;
+    padding: 4em;
+    box-shadow: 0 0 10px 0;
+    background-color: #fff;
+    border: hidden;
+    font-size: 20px;
+    color: #1a120d;
+    font-weight: bold;
+ }
+ 
+ .year,
+ .shed,
+ .cows{
+    border: 2px solid black;
+    padding: 4.1em;
+    box-shadow: 0 0 10px 0;
+    background-color: #fff;
+    border: hidden;
+    font-size: 20px;
+    color: #1a120d;
+    font-weight: bold;
+
+ }
+  .shed,
+ .cows{
+   width: inherit;
+   padding-left: 4.5em;
+   padding-right: 5.5em;
+   margin-left: -2em;
+   margin-right: -1em;
+   color: #1a120d;
+ } 
+ .dailyproduction form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .weeklyIncome form{
+    position: relativ*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+body{
+    min-height: 100vh;
+    background: #fff;
+    color: #1a120d;
+    font-size: larger;
+    font-family: 'Courgette', cursive;
+   
+    
+
+}/*
+.logo{
+    color: #1a120d;
+    letter-spacing: 2.5px;
+    text-align: center;
+    position: relative;
+    top: 10em;
+    
+    
+}
+.logo h1{
+    font-weight:bold;
+    font-size: 40px;
+    font-family: "monteserat",sans-serif;
+
+}
+.logo h2{
+    
+    font-size: 35px;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    font-family: 'Bree Serif', serif;
+    
+}
+/* .navigationBar{
+    position: fixed;
+    top:0;
+    left: 20px;
+    bottom: 20px;
+   
+    border-radius: 5px;
+    
+    box-sizing: initial;
+     
+    transition: width 0.2s;
+    overflow: hidden;
+    height: 100vh;
+    box-shadow: 0 6px 7px -4 rgba(0,0,0,0.2);
+}
+ 
+
+.navigationBar ul{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+    font-size: larger;
+    font-family: 'Rubik', sans-serif;
+    font-style: oblique;
+    
+    
+}
+ .navigationBar ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+
+}
+.navigationBar ul li.active{
+    background: #fff;
+    color:#333;
+} 
+.navigationBar ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #1a120d;
+    font-weight: 400;
+    font-size: 22px;
+    display: inline-block;
+    
+    
+}
+
+.navigationBar ul li a:hover{
+    
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: #ecce9f;
+}
+
+.navigationBar ul li.active a{ 
+    color:#333;
+}
+.navigationBar ul li a .title {
+    display: block;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 60px;
+    line-height: 45px;
+    white-space: normal;
+}
+.navigationBar ul li a .title >img{
+    width: 30px;
+    position: relative;
+    top: 10px;
+    right: 2px;
+}
+.toggleMenu{
+    position: fixed;
+    top: 85px;
+     right: 20px; 
+     left: 40px;
+    width: 50px;
+    height: 50px;
+
+    background: #7D9D9C;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+
+}
+.toggleMenu.active{
+    background: #7D9D9C;
+    display: none;
+    
+}
+.toggleMenu ion-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    display: none;
+}
+.toggleMenu ion-icon.display,
+.toggleMenu.active ion-icon.close{
+    display: block;
+    display: none;
+
+}
+.toggleMenu ion-icon.close,
+.toggleMenu.active ion-icon.display{
+    display: none;
+}
+.charts{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    display: none;
+    
+   
+}
+.chart container{
+    justify-content: space-between;
+}
+.second{
+    display: flex;
+    gap: 120px;
+    position: relative;
+    top: -3em;
+    
+
+    
+}
+.first{
+    display: flex;
+    gap: 70px;
+    position: relative;
+    top: -8em;
+    
+   
+    
+ }
+ 
+ .day,
+ .week,
+ .month{
+    border: 2px solid black;
+    padding: 4em;
+    box-shadow: 0 0 10px 0;
+    background-color: #fff;
+    border: hidden;
+    font-size: 20px;
+    color: #1a120d;
+    font-weight: bold;
+ }
+ 
+ .year,
+ .shed,
+ .cows{
+    border: 2px solid black;
+    padding: 4.1em;
+    box-shadow: 0 0 10px 0;
+    background-color: #fff;
+    border: hidden;
+    font-size: 20px;
+    color: #1a120d;
+    font-weight: bold;
+
+ }
+  .shed,
+ .cows{
+   width: inherit;
+   padding-left: 4.5em;
+   padding-right: 5.5em;
+   margin-left: -2em;
+   margin-right: -1em;
+   color: #1a120d;
+ } 
+ .dailyproduction form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .weeklyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .monthlyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .yearlyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ #submit {
+    text-decoration:none;
+    width:10%;
+    text-align:center;
+    display:block;
+    background-color:rgb(167, 176, 232);
+    color:#fff;
+    border:1px solid rgb(167, 176, 232);
+    padding:7px 0;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:5px;
+    position: relative;
+    top: 10px;
+    }
+    btn1, input[type=submit],input[type=button]{
+        font-size: 1.4em;
+        font-weight: bold;
+        margin: 8px;
+        padding: 12px;
+        background-color: #EEE;
+        color: #222;
+        border: 4px solid orange;
+    }
+    btn1:hover,input[type=submit]:hover, input[type=button]:hover{
+        background-color: #456;
+        color: orange;
+        cursor: pointer;
+    }
+    input[type=text]{
+        font-size: 1.4em;
+    }
+  */
+  .userinput{
+    display:flex;
+    flex-direction: column;
+    /* position: relative;
+    top: 30px; */
+
+ }
+ .div1,
+ .div2,
+ .div3,
+ .div4{
+    font-size: larger;
+ }
+ #btn1{
+    padding: 3px 30px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    left: 10px;
+    
+ }
+ .ptag{
+        /* position: relative;
+        top: 56px; */
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Raleway',sans-serif;
+    
+ }
+ input[type=text] {
+    width:20%;
+    padding:10px;
+    margin-top:30px;
+    border:1px solid #ccc;
+    padding-left:40px;
+    font-size:16px;
+    background-color:whitesmoke;
+    
+    }
+#k{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}   
+#button{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+
+} 
+#btn2{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    
+    
+}
+e;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .monthlyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ .yearlyIncome form{
+    position: relative;
+    top:15em;
+    padding-bottom: 10px;
+ }
+ #submit {
+    text-decoration:none;
+    width:10%;
+    text-align:center;
+    display:block;
+    background-color:rgb(167, 176, 232);
+    color:#fff;
+    border:1px solid rgb(167, 176, 232);
+    padding:7px 0;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:5px;
+    position: relative;
+    top: 10px;
+    }
+    btn1, input[type=submit],input[type=button]{
+        font-size: 1.4em;
+        font-weight: bold;
+        margin: 8px;
+        padding: 12px;
+        background-color: #EEE;
+        color: #222;
+        border: 4px solid orange;
+    }
+    btn1:hover,input[type=submit]:hover, input[type=button]:hover{
+        background-color: #456;
+        color: orange;
+        cursor: pointer;
+    }
+    input[type=text]{
+        font-size: 1.4em;
+    }
+  */
+  .userinput{
+    display:flex;
+    flex-direction: column;
+    /* position: relative;
+    top: 30px; */
+
+ }
+ .div1,
+ .div2,
+ .div3,
+ .div4{
+    font-size: larger;
+ }
+ #btn1{
+    padding: 3px 30px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    left: 10px;
+    
+ }
+ .ptag{
+        /* position: relative;
+        top: 56px; */
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Raleway',sans-serif;
+    
+ }
+ input[type=text] {
+    width:20%;
+    padding:10px;
+    margin-top:30px;
+    border:1px solid #ccc;
+    padding-left:40px;
+    font-size:16px;
+    background-color:whitesmoke;
+    
+    }
+#k{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}   
+#button{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+
+} 
+#btn2{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    
+    
+}
+
 
         </div>
         <div class="weeklyIncome">

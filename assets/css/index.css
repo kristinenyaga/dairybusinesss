@@ -353,3 +353,29 @@ body{
     
     
 }
+#weekcontainer{
+    margin: 60px auto;
+    height: 70px;
+    width: 45%;
+    text-align: center;
+}
+#weekcontainer h2{
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+#yearcontainer{
+
+    margin: 60px auto;
+    height: 270px ;
+    width: 45%;
+    text-align: center;
+}
+#yearcontainer h2{
+    margin-top: 4px;
+    margin-bottom: 12px;
+
+}
+#reports{
+    display: flex;
+    color: black;
+}
