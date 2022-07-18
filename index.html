@@ -18,24 +18,33 @@
     <div class="userinput">
         <div class="div1">
             
-                <label for="shed1" >Shed A</label><input id="shedA" type="text" placeholder="enter milk in litres">
-                <button id="btn1" onclick="getOutput1()">click</button>
-             
+                <label for="shed1" >Shed A: </label><input id="shedA" type="text" placeholder="enter milk in litres">
+                
         </div>
+
         <div class="div2">
             
-                <label for="shed2" >Shed B</label><input id="shedB" type="text" placeholder="enter milk in litres">
-                <button id="btn1" onclick="getOutput2()">click</button>
+                <label for="shed2" >Shed B: </label><input id="shedB" type="text" placeholder="enter milk in litres">
+                <!-- <button id="btn1" onclick="getOutput2()">click</button> -->
                 
         </div>
         <div class="div3">
-            <label for="shed3" >Shed C</label><input id="shedC" type="text" placeholder="enter milk in litres">
-            <button id="btn1" onclick="getOutput3()">click</button>
+            <label for="shed3" >Shed C: </label><input id="shedC" type="text" placeholder="enter milk in litres">
+            <!-- <button id="btn1" onclick="getOutput3()">click</button> -->
         </div>
         <div class="div4">
-            <label for="shed4" >Shed D</label><input id="shedD"type="text" placeholder="enter milk in litres">
-            <button id="btn1" onclick="getOutput4()">click</button>
+            <label for="shed4" >Shed D: </label><input id="shedD"type="text" placeholder="enter milk in litres">
+            <!-- <button id="btn1" onclick="getOutput4()"></button> -->
         </div>
+        <button id="btn1" onclick="getOutput1()">click</button>
+        <button id="k" onclick="getTotal()">total production</button>
+        <div class="totalinput">
+            <label for="totalvalue">Total</label>
+            <input type="text"id="totalvalue" value="0" disabled="">
+
+        </div>
+                
+        
     </div>
     <div class="ptag">
         <p >Your production in shed A is <span id="output1">Nan</span> litres per day</p>
@@ -46,7 +55,18 @@
 
 
     </div>
-    
+    <div>
+        <h1> Weekly and Monthly Income</h1>
+        <label for="spweek" >Selling Price(week): </label><input id="spweek" type="text" placeholder="selling price">
+        <button id="btn1" onclick="">click</button>
+        <label for="durationweek" >Duration: </label><input id="durationweek" type="text" placeholder="time">
+        <button id="btn1" onclick="">click</button>
+
+    </div>
+    <label for="spmonth" >Selling Price(month): </label><input id="spmonth" type="text" placeholder="selling price">
+    <button id="btn1" onclick="getOutput2()">click</button>
+    <label for="durationmonth" >Duration: </label><input id="durationmonth" type="text" placeholder="time">
+    <button id="btn1" onclick="getOutput2()">click</button>
     <!-- <div class="navigationBar">
         <div class="logo">
             <h1>Dairy Business</h1>
