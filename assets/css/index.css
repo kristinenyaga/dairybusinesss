@@ -4,15 +4,17 @@
     box-sizing: border-box;
     
 
-}/*
+}
 body{
     min-height: 100vh;
     background: #fff;
     color: #1a120d;
-    background-color: aliceblue;
+    font-size: larger;
+    font-family: 'Courgette', cursive;
+   
     
 
-}/
+}/*
 .logo{
     color: #1a120d;
     letter-spacing: 2.5px;
@@ -292,11 +294,13 @@ body{
     font-size: larger;
  }
  #btn1{
-    padding: 3px 20px;
+    padding: 3px 30px;
     font-size: large;
     color: red;
     background-color:whitesmoke;
     border-radius: 5px;
+    position: relative;
+    left: 10px;
     
  }
  .ptag{
@@ -315,5 +319,37 @@ body{
     border:1px solid #ccc;
     padding-left:40px;
     font-size:16px;
+    background-color:whitesmoke;
     
     }
+#k{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+}   
+#button{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+
+} 
+#btn2{
+    width: 10%;
+    height: 30px;
+    padding: 3px 20px;
+    font-size: large;
+    color: red;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    
+    
+}
